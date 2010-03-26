@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "photo-share-site", "photo-share-site\photo-share-site.csproj", "{193DB08D-E574-4585-BAF2-0673E9ABD5D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoShare", "PhotoShare\PhotoShare.csproj", "{137ED12D-0954-4F40-AE20-C6E6B56F33EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test_app", "test_app\test_app.csproj", "{9A52C6A4-1B5C-4493-83E1-92918EF6C141}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "photo-share-db", "photo-share-db\photo-share-db.csproj", "{A50FFACE-40C6-4832-95C9-FF03751E5306}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{193DB08D-E574-4585-BAF2-0673E9ABD5D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{193DB08D-E574-4585-BAF2-0673E9ABD5D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{193DB08D-E574-4585-BAF2-0673E9ABD5D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{193DB08D-E574-4585-BAF2-0673E9ABD5D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{137ED12D-0954-4F40-AE20-C6E6B56F33EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{137ED12D-0954-4F40-AE20-C6E6B56F33EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{137ED12D-0954-4F40-AE20-C6E6B56F33EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{137ED12D-0954-4F40-AE20-C6E6B56F33EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A52C6A4-1B5C-4493-83E1-92918EF6C141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A52C6A4-1B5C-4493-83E1-92918EF6C141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A52C6A4-1B5C-4493-83E1-92918EF6C141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A52C6A4-1B5C-4493-83E1-92918EF6C141}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A50FFACE-40C6-4832-95C9-FF03751E5306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A50FFACE-40C6-4832-95C9-FF03751E5306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A50FFACE-40C6-4832-95C9-FF03751E5306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A50FFACE-40C6-4832-95C9-FF03751E5306}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
