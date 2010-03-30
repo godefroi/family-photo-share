@@ -41,6 +41,7 @@
   </Target>
   -->
   <ItemGroup>
+    <None Include="Functions\UserPhotos.function.sql" />
     <None Include="Scripts\Post-Deployment\Script.PostDeployment.sql" />
     <None Include="Scripts\Pre-Deployment\Script.PreDeployment.sql" />
     <None Include="Tables\Photos.table.sql" />
