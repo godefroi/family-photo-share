@@ -60,14 +60,14 @@ namespace PhotoShare
 			{
 				var parms = new DbParameter[]
 					{
-						qh.CreateParameter("@fname", DbType.String, Path.GetFileName(filename)),
-						qh.CreateParameter("@user",  DbType.Int32, 4, user),
-						qh.CreateParameter("@pic",   DbType.Binary, photo),
-						qh.CreateParameter("@thumb", DbType.Binary, thumb),
-						qh.CreateParameter("@ctype", DbType.String, ctype),
+						qh.CreateParameter("@fname", DbType.String,   Path.GetFileName(filename)),
+						qh.CreateParameter("@user",  DbType.Int32,    4, user),
+						qh.CreateParameter("@pic",   DbType.Binary,   photo),
+						qh.CreateParameter("@thumb", DbType.Binary,   thumb),
+						qh.CreateParameter("@ctype", DbType.String,   ctype),
 						qh.CreateParameter("@fdate", DbType.DateTime, file_date),
 						qh.CreateParameter("@udate", DbType.DateTime, DateTime.Now.ToUniversalTime()),
-						qh.CreateParameter("@hash",  DbType.String, MakeHash(m_hasher.ComputeHash(photo))),
+						qh.CreateParameter("@hash",  DbType.String,   MakeHash(m_hasher.ComputeHash(photo))),
 					};
 
 				qh.ExecuteQuery(sql, parms, (p, dr) => ret = dr.Read() ? dr.GetInt32(0) : -1);
