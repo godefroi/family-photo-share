@@ -135,10 +135,8 @@ from
 		p.filedate,
 		p.uploaddate
 	from
-		photos p
+		userphotos(@uid) p
 			inner join users u on u.userid = p.uploadedby
-	where
-		p.uploadedby = @uid
 ) q1
 where
 	rownum > @start and rownum <= @end
@@ -163,6 +161,47 @@ order by
 							var o = new PhotoInfo();
 							o.FillFrom(r);
 							ret.Add(o);
+						}
+					});
+
+				return ret;
+			}
+		}
+
+		public PhotoInfo GetPhotoInfo(int userid, int photoid)
+		{
+			var sql = @"
+select
+	p.photoid,
+	p.title,
+	p.filename,
+	p.description,
+	u.username,
+	p.contenttype,
+	p.filedate,
+	p.uploaddate
+from
+	userphotos(@uid) p
+		inner join users u on u.userid = p.uploadedby
+where
+	p.photoid = @pid
+";
+
+			using( var qh = new QueryHelper(m_cname) )
+			{
+				PhotoInfo ret   = null;
+				var       parms = new DbParameter[]
+					{
+						qh.CreateParameter("@uid",   DbType.Int32, 4, userid),
+						qh.CreateParameter("@pid",   DbType.Int32, 4, photoid),
+					};
+
+				qh.ExecuteQuery(sql, parms, (p, r) =>
+					{
+						if( r.Read() )
+						{
+							ret = new PhotoInfo();
+							ret.FillFrom(r);
 						}
 					});
 
